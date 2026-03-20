@@ -73,21 +73,97 @@
     </style>
   </head>
   <body class="antialiased">
-    <nav
-      class="sticky top-0 z-50 glass-nav py-4 px-8 flex justify-between items-center"
-    >
-      <a
-        href="index.html"
-        class="text-xl font-bold tracking-tighter uppercase gemini-text"
-        >Sharma Mobiles</a
+    <nav class="sticky top-0 z-50 glass border-b border-gray-200">
+      <div
+        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
-      <div class="flex items-center space-x-6 text-sm font-medium">
-        <a href="index.html" class="text-gray-600 hover:text-black transition"
-          >Home</a
+        <a
+          href="index.html"
+          class="text-xl font-black tracking-tight brand-gradient"
         >
-        <a href="emi.html" class="text-gray-600 hover:text-black transition"
-          >EMI Plans</a
+          Sharma Mobiles
+        </a>
+
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
         >
+          <a href="index.html" class="hover:text-black transition">Home</a>
+
+          <div class="relative">
+            <button
+              id="productBtn"
+              class="flex items-center gap-1 hover:text-black transition"
+            >
+              Products
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="productMenu"
+              class="hidden absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+            >
+              <a
+                href="samsung.html"
+                class="block px-5 py-3 hover:bg-gray-50 font-semibold text-blue-600"
+                >Samsung Galaxy</a
+              >
+              <a href="iphone.html" class="block px-5 py-3 hover:bg-gray-50"
+                >iPhone</a
+              >
+              <a href="vivo-oppo.html" class="block px-5 py-3 hover:bg-gray-50"
+                >Vivo / Oppo</a
+              >
+              <a
+                href="realme-redmi.html"
+                class="block px-5 py-3 hover:bg-gray-50"
+                >Realme / Redmi</a
+              >
+              <a
+                href="moto-oneplus.html"
+                class="block px-5 py-3 hover:bg-gray-50"
+                >Moto / OnePlus</a
+              >
+            </div>
+          </div>
+
+          <a href="service.html" class="hover:text-black transition">Repairs</a>
+          <a href="emi.html" class="hover:text-black transition">EMI Options</a>
+
+          <a
+            href="order.html"
+            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition"
+          >
+            Order Now
+          </a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden">
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
 
@@ -155,12 +231,12 @@
               </button>
               <div class="img-track snap-inline no-scrollbar h-full">
                 <img
-                  src="images/realme gt.webp"
+                  src="images/realmegt.webp"
                   class="snap-item"
                   alt="GT Front"
                 />
                 <img
-                  src="images/realme gt 02.jpg"
+                  src="images/realmegt02.jpg"
                   class="snap-item"
                   alt="GT Back"
                 />
@@ -223,12 +299,12 @@
               </button>
               <div class="img-track snap-inline no-scrollbar h-full">
                 <img
-                  src="images/realme 13 pro +.jpg"
+                  src="images/realme13pro+.jpg"
                   class="snap-item"
                   alt="13 Pro Front"
                 />
                 <img
-                  src="images/realme 13 pro.jpg"
+                  src="images/realme13pro.jpg"
                   class="snap-item"
                   alt="13 Pro Side"
                 />
@@ -291,12 +367,12 @@
               </button>
               <div class="img-track snap-inline no-scrollbar h-full">
                 <img
-                  src="images/p series.jpg"
+                  src="images/pseries.jpg"
                   class="snap-item"
                   alt="P Series 1"
                 />
                 <img
-                  src="images/realme p 02.jpg"
+                  src="images/realmep02.jpg"
                   class="snap-item"
                   alt="P Series 2"
                 />
@@ -374,12 +450,12 @@
               </button>
               <div class="img-track snap-inline no-scrollbar h-full">
                 <img
-                  src="images/redmi note 15 pro.jpg"
+                  src="images/redminote15pro.jpg"
                   class="snap-item"
                   alt="Note 15 Front"
                 />
                 <img
-                  src="images/redmi note 15 pro back.jpg"
+                  src="images/redminote15proback.jpg"
                   class="snap-item"
                   alt="Note 15 Back"
                 />
@@ -442,12 +518,12 @@
               </button>
               <div class="img-track snap-inline no-scrollbar h-full">
                 <img
-                  src="images/redmi 15 c.jpg"
+                  src="images/redmi15c.jpg"
                   class="snap-item"
                   alt="Redmi 15c 1"
                 />
                 <img
-                  src="images/redmi 15c back.jpg"
+                  src="images/redmi15cback.jpg"
                   class="snap-item"
                   alt="Redmi 15c 2"
                 />
@@ -510,12 +586,12 @@
               </button>
               <div class="img-track snap-inline no-scrollbar h-full">
                 <img
-                  src="images/redmi note 14 pro.jpg"
+                  src="images/redminote14pro.jpg"
                   class="snap-item"
                   alt="Redmi Note 14 Front"
                 />
                 <img
-                  src="images/redmi note 14 pro back.jpg"
+                  src="images/redminote14proback.jpg"
                   class="snap-item"
                   alt="Redmi Note 14 Lens"
                 />
@@ -628,8 +704,7 @@
           class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500"
         >
           © 2026 Sharma Mobiles. All rights reserved.
-         <br>Maintained by The Visionary Labz
-          <br>7602858368 / 7365055639
+          <br />Maintained by The Visionary Labz <br />7602858368 / 7365055639
         </div>
       </div>
     </footer>

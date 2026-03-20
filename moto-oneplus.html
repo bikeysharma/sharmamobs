@@ -87,25 +87,99 @@
   </head>
 
   <body class="antialiased">
-    <nav
-      class="sticky top-0 z-50 glass-nav px-6 py-4 flex justify-between items-center"
-    >
-      <a
-        href="index.html"
-        class="text-xl font-black tracking-tight brand-gradient"
+    <nav class="sticky top-0 z-50 glass border-b border-gray-200">
+      <div
+        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
-        Sharma Mobiles
-      </a>
-
-      <div class="flex items-center gap-8 text-sm font-medium text-gray-600">
-        <a href="index.html" class="hover:text-black transition">
-          Store Home
+        <a
+          href="index.html"
+          class="text-xl font-black tracking-tight brand-gradient"
+        >
+          Sharma Mobiles
         </a>
 
-        <a href="emi.html" class="hover:text-black transition"> EMI Options </a>
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
+        >
+          <a href="index.html" class="hover:text-black transition">Home</a>
+
+          <div class="relative">
+            <button
+              id="productBtn"
+              class="flex items-center gap-1 hover:text-black transition"
+            >
+              Products
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="productMenu"
+              class="hidden absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+            >
+              <a
+                href="samsung.html"
+                class="block px-5 py-3 hover:bg-gray-50 font-semibold text-blue-600"
+                >Samsung Galaxy</a
+              >
+              <a href="iphone.html" class="block px-5 py-3 hover:bg-gray-50"
+                >iPhone</a
+              >
+              <a href="vivo-oppo.html" class="block px-5 py-3 hover:bg-gray-50"
+                >Vivo / Oppo</a
+              >
+              <a
+                href="realme-redmi.html"
+                class="block px-5 py-3 hover:bg-gray-50"
+                >Realme / Redmi</a
+              >
+              <a
+                href="moto-oneplus.html"
+                class="block px-5 py-3 hover:bg-gray-50"
+                >Moto / OnePlus</a
+              >
+            </div>
+          </div>
+
+          <a href="service.html" class="hover:text-black transition">Repairs</a>
+          <a href="emi.html" class="hover:text-black transition">EMI Options</a>
+
+          <a
+            href="order.html"
+            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition"
+          >
+            Order Now
+          </a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden">
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
-
     <header class="py-24 px-6 text-center bg-white">
       <span
         class="text-xs uppercase tracking-[0.35em] text-gray-400 font-semibold"
@@ -123,7 +197,7 @@
 
         <div class="w-[1px] h-8 bg-gray-300"></div>
 
-        <img src="images/oneplus logo.png" class="h-6 opacity-80" />
+        <img src="images/onepluslogo.png" class="h-6 opacity-80" />
       </div>
     </header>
 
@@ -180,9 +254,9 @@
               <div
                 class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
               >
-                <img src="images/moto edge 60.jpg" class="snap-item" />
-                <img src="images/edge 60 pro.jpg" class="snap-item" />
-                <img src="images/edge 60 pro 02.jpg" class="snap-item" />
+                <img src="images/motoedge60.jpg" class="snap-item" />
+                <img src="images/edge60pro.jpg" class="snap-item" />
+                <img src="images/edge60pro02.jpg" class="snap-item" />
               </div>
             </div>
 
@@ -235,8 +309,8 @@
               <div
                 class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
               >
-                <img src="images/razr 60.jpg" class="snap-item" />
-                <img src="images/razr 60 02.jpg" class="snap-item" />
+                <img src="images/razr60.jpg" class="snap-item" />
+                <img src="images/razr60-02.jpg" class="snap-item" />
               </div>
             </div>
 
@@ -289,8 +363,8 @@
               <div
                 class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
               >
-                <img src="images/g86 power.jpg" class="snap-item" />
-                <img src="images/g86 power 02.jpg" class="snap-item" />
+                <img src="images/g86power.jpg" class="snap-item" />
+                <img src="images/g86power02.jpg" class="snap-item" />
               </div>
             </div>
 
@@ -364,8 +438,8 @@
               <div
                 class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
               >
-                <img src="images/oneplus 15.webp" class="snap-item" />
-                <img src="images/one plus 15.jpg" class="snap-item" />
+                <img src="images/oneplus15.webp" class="snap-item" />
+                <img src="images/oneplus15.jpg" class="snap-item" />
               </div>
             </div>
 
@@ -418,8 +492,8 @@
               <div
                 class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
               >
-                <img src="images/one plus 15r.jpg" class="snap-item" />
-                <img src="images/one plus 15r 2.jpg" class="snap-item" />
+                <img src="images/oneplus15r.jpg" class="snap-item" />
+                <img src="images/oneplus15r2.jpg" class="snap-item" />
               </div>
             </div>
 
@@ -472,8 +546,8 @@
               <div
                 class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
               >
-                <img src="images/nord 5.webp" class="snap-item" />
-                <img src="images/nord 5 02.jpg" class="snap-item" />
+                <img src="images/nord5.webp" class="snap-item" />
+                <img src="images/nord502.jpg" class="snap-item" />
               </div>
             </div>
 
@@ -568,8 +642,7 @@
           class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500"
         >
           © 2026 Sharma Mobiles. All rights reserved.
-         <br>Maintained by The Visionary Labz
-          <br>7602858368 / 7365055639
+          <br />Maintained by The Visionary Labz <br />7602858368 / 7365055639
         </div>
       </div>
     </footer>
