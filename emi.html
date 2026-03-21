@@ -239,57 +239,65 @@
           </div>
 
           <!-- ================= RIGHT PANEL ================= -->
-<div
-  class="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden flex flex-col justify-between"
->
-  <!-- Badge -->
-  <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-xs px-3 py-1 rounded-full">
-    No Cost EMI
-  </div>
+          <div
+            class="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden flex flex-col justify-between"
+          >
+            <!-- Badge -->
+            <div
+              class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-xs px-3 py-1 rounded-full"
+            >
+              No Cost EMI
+            </div>
 
-  <!-- EMI -->
-  <div class="text-center">
-    <p class="uppercase tracking-widest opacity-80 text-[clamp(0.65rem,0.8vw,0.75rem)]">
-      Monthly EMI
-    </p>
+            <!-- EMI -->
+            <div class="text-center">
+              <p
+                class="uppercase tracking-widest opacity-80 text-[clamp(0.65rem,0.8vw,0.75rem)]"
+              >
+                Monthly EMI
+              </p>
 
-    <h1 class="font-bold mt-2 text-[clamp(2.2rem,5vw,3.2rem)] leading-tight">
-      ₹<span id="emi-result">0</span>
-    </h1>
+              <h1
+                class="font-bold mt-2 text-[clamp(2.2rem,5vw,3.2rem)] leading-tight"
+              >
+                ₹<span id="emi-result">0</span>
+              </h1>
 
-    <p id="interest-label" class="opacity-80 mt-2 text-[clamp(0.8rem,1vw,0.9rem)]">
-      No Cost EMI Applied
-    </p>
-  </div>
+              <p
+                id="interest-label"
+                class="opacity-80 mt-2 text-[clamp(0.8rem,1vw,0.9rem)]"
+              >
+                No Cost EMI Applied
+              </p>
+            </div>
 
-  <!-- Divider -->
-  <div class="border-t border-white/20 my-5 md:my-6"></div>
+            <!-- Divider -->
+            <div class="border-t border-white/20 my-5 md:my-6"></div>
 
-  <!-- BREAKDOWN -->
-  <div class="space-y-3 text-[clamp(0.85rem,1vw,0.95rem)]">
-    
-    <div class="flex justify-between">
-      <span class="opacity-80">Interest</span>
-      <span id="interest">₹0</span>
-    </div>
+            <!-- BREAKDOWN -->
+            <div class="space-y-3 text-[clamp(0.85rem,1vw,0.95rem)]">
+              <div class="flex justify-between">
+                <span class="opacity-80">Interest</span>
+                <span id="interest">₹0</span>
+              </div>
 
-    <div class="flex justify-between">
-      <span class="opacity-80">Tenure</span>
-      <span id="tenure-label">0 Months</span>
-    </div>
+              <div class="flex justify-between">
+                <span class="opacity-80">Tenure</span>
+                <span id="tenure-label">0 Months</span>
+              </div>
 
-    <div class="border-t border-white/20 pt-3 flex justify-between font-semibold text-[clamp(1rem,1.2vw,1.1rem)]">
-      <span>Approx. Payable</span>
-      <span id="total">₹0</span>
-    </div>
+              <div
+                class="border-t border-white/20 pt-3 flex justify-between font-semibold text-[clamp(1rem,1.2vw,1.1rem)]"
+              >
+                <span>Approx. Payable</span>
+                <span id="total">₹0</span>
+              </div>
 
-    <p class="text-xs opacity-70 text-center pt-2">
-      *This is an approximate EMI. Final amount may vary slightly.
-    </p>
-  </div>
-</div>
-
-
+              <p class="text-xs opacity-70 text-center pt-2">
+                *This is an approximate EMI. Final amount may vary slightly.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -771,108 +779,106 @@
     </footer>
 
     <script>
-  const DOM = {
-    price: document.getElementById("price"),
-    tenure: document.getElementById("tenure"),
-    partner: document.getElementById("partner"),
+      const DOM = {
+        price: document.getElementById("price"),
+        tenure: document.getElementById("tenure"),
+        partner: document.getElementById("partner"),
 
-    emi: document.getElementById("emi-result"),
-    interest: document.getElementById("interest"),
-    total: document.getElementById("total"),
-    label: document.getElementById("interest-label"),
-    tenureLabel: document.getElementById("tenure-label"),
-  };
+        emi: document.getElementById("emi-result"),
+        interest: document.getElementById("interest"),
+        total: document.getElementById("total"),
+        label: document.getElementById("interest-label"),
+        tenureLabel: document.getElementById("tenure-label"),
+      };
 
-  const FINANCE_CONFIG = {
-    partners: {
-      chola: { label: "Chola Plan" },
-      tvs: { label: "TVS EMI" },
-      samsung: { label: "Samsung Offer" },
-      bajaj: { label: "Bajaj EMI" },
-      hdfc: { label: "HDFC EMI" },
-      dmi: { label: "DMI Plan" },
-    },
-  };
+      const FINANCE_CONFIG = {
+        partners: {
+          chola: { label: "Chola Plan" },
+          tvs: { label: "TVS EMI" },
+          samsung: { label: "Samsung Offer" },
+          bajaj: { label: "Bajaj EMI" },
+          hdfc: { label: "HDFC EMI" },
+          dmi: { label: "DMI Plan" },
+        },
+      };
 
-  /* ================================
+      /* ================================
      CORE CALCULATION (APPROX)
   ================================= */
-  function calculateEMIData({ price, tenure, partnerKey }) {
-    const partner = FINANCE_CONFIG.partners[partnerKey];
+      function calculateEMIData({ price, tenure, partnerKey }) {
+        const partner = FINANCE_CONFIG.partners[partnerKey];
 
-    if (!partner || !price || !tenure) return null;
+        if (!partner || !price || !tenure) return null;
 
-    // No cost EMI → no interest
-    const totalInterest = 0;
+        // No cost EMI → no interest
+        const totalInterest = 0;
 
-    // EMI rounded (real-world approx)
-    const emi = Math.round(price / tenure);
+        // EMI rounded (real-world approx)
+        const emi = Math.round(price / tenure);
 
-    // Approx total (important)
-    const totalPayable = emi * tenure;
+        // Approx total (important)
+        const totalPayable = emi * tenure;
 
-    return {
-      emi,
-      totalInterest,
-      totalPayable,
-      partnerLabel: partner.label,
-    };
-  }
+        return {
+          emi,
+          totalInterest,
+          totalPayable,
+          partnerLabel: partner.label,
+        };
+      }
 
-  /* ================================
+      /* ================================
      FORMATTER
   ================================= */
-  function formatINR(value) {
-    return "₹" + value.toLocaleString("en-IN");
-  }
+      function formatINR(value) {
+        return "₹" + value.toLocaleString("en-IN");
+      }
 
-  /* ================================
+      /* ================================
      UI UPDATE
   ================================= */
-  function updateUI(data, tenure) {
-    if (!data) return;
+      function updateUI(data, tenure) {
+        if (!data) return;
 
-    DOM.emi.innerText = data.emi.toLocaleString("en-IN");
-    DOM.interest.innerText = "₹0";
-    DOM.total.innerText = formatINR(data.totalPayable);
+        DOM.emi.innerText = data.emi.toLocaleString("en-IN");
+        DOM.interest.innerText = "₹0";
+        DOM.total.innerText = formatINR(data.totalPayable);
 
-    DOM.tenureLabel.innerText = `${tenure} Months`;
+        DOM.tenureLabel.innerText = `${tenure} Months`;
 
-    DOM.label.innerText = `✔ No Cost EMI • ${data.partnerLabel}`;
-  }
+        DOM.label.innerText = `✔ No Cost EMI • ${data.partnerLabel}`;
+      }
 
-  /* ================================
+      /* ================================
      CONTROLLER
   ================================= */
-  function handleCalculation() {
-    const price = parseFloat(DOM.price.value) || 0;
-    const tenure = parseInt(DOM.tenure.value) || 0;
-    const partnerKey = DOM.partner.value;
+      function handleCalculation() {
+        const price = parseFloat(DOM.price.value) || 0;
+        const tenure = parseInt(DOM.tenure.value) || 0;
+        const partnerKey = DOM.partner.value;
 
-    const result = calculateEMIData({
-      price,
-      tenure,
-      partnerKey,
-    });
+        const result = calculateEMIData({
+          price,
+          tenure,
+          partnerKey,
+        });
 
-    updateUI(result, tenure);
-  }
+        updateUI(result, tenure);
+      }
 
-  /* ================================
+      /* ================================
      EVENTS
   ================================= */
-  ["input", "change"].forEach((event) => {
-    DOM.price.addEventListener(event, handleCalculation);
-    DOM.tenure.addEventListener(event, handleCalculation);
-    DOM.partner.addEventListener(event, handleCalculation);
-  });
+      ["input", "change"].forEach((event) => {
+        DOM.price.addEventListener(event, handleCalculation);
+        DOM.tenure.addEventListener(event, handleCalculation);
+        DOM.partner.addEventListener(event, handleCalculation);
+      });
 
-  /* ================================
+      /* ================================
      INIT
   ================================= */
-  handleCalculation();
-</script>
-
-
+      handleCalculation();
+    </script>
   </body>
 </html>
