@@ -28,25 +28,6 @@
         -webkit-text-fill-color: transparent;
       }
 
-      .hero-gradient {
-        background:
-          radial-gradient(
-            circle at 20% 20%,
-            rgba(59, 130, 246, 0.15),
-            transparent 60%
-          ),
-          radial-gradient(
-            circle at 80% 40%,
-            rgba(168, 85, 247, 0.15),
-            transparent 60%
-          ),
-          radial-gradient(
-            circle at 40% 80%,
-            rgba(239, 68, 68, 0.12),
-            transparent 60%
-          );
-      }
-
       .glass {
         background: rgba(255, 255, 255, 0.75);
         backdrop-filter: blur(14px);
@@ -59,6 +40,12 @@
       .card-hover:hover {
         transform: translateY(-8px);
         box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.12);
+      }
+
+      .gemini-text {
+        background: linear-gradient(90deg, #4285f4, #9b51e0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     </style>
   </head>
@@ -78,7 +65,6 @@
           class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
         >
           <a href="index.html" class="hover:text-black transition">Home</a>
-
           <div class="relative">
             <button
               id="productBtn"
@@ -99,7 +85,6 @@
                 />
               </svg>
             </button>
-
             <div
               id="productMenu"
               class="hidden absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
@@ -115,7 +100,7 @@
               <a
                 href="techno-infinix.html"
                 class="block px-5 py-3 hover:bg-gray-50"
-                >infinix</a
+                >Infinix</a
               >
               <a href="vivo-oppo.html" class="block px-5 py-3 hover:bg-gray-50"
                 >Vivo / Oppo</a
@@ -132,16 +117,13 @@
               >
             </div>
           </div>
-
           <a href="service.html" class="hover:text-black transition">Repairs</a>
           <a href="emi.html" class="hover:text-black transition">EMI Options</a>
-
           <a
             href="order.html"
             class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition"
+            >Order Now</a
           >
-            Order Now
-          </a>
         </div>
 
         <button id="mobileMenuBtn" class="md:hidden">
@@ -171,26 +153,141 @@
       >
       <a href="iphone.html" class="block text-gray-600 font-medium">iPhone</a>
       <a href="techno-infinix.html" class="block text-gray-600 font-medium"
-        >infinix</a
-      >
-      <a href="vivo-oppo.html" class="block text-gray-600 font-medium"
-        >Vivo / Oppo</a
-      >
-      <a href="moto-oneplus.html" class="block text-gray-600 font-medium"
-        >Moto / OnePlus</a
-      >
-      <a href="realme-redmi.html" class="block text-gray-600 font-medium"
-        >Realme / Redmi</a
-      >
+        >Infinix</a
+        >
+      <a href="vivo-oppo.html" class="block text-gray-600 font-medium">Vivo / Oppo </a>
+      <a href="moto-oneplus.html" class="block text-gray-600 font-medium">Moto / Oneplus</a>
+      <a href="realme-redmi.html" class="block text-gray-600 font-medium">Redmi / Realme</a>
       <a href="service.html" class="block text-gray-600 font-medium">Repairs</a>
       <a href="emi.html" class="block text-gray-600 font-medium">EMI Options</a>
     </div>
 
-    <header class="py-24 px-8 text-center bg-white relative">
+    <section
+      id="sliderWrapper"
+      class="relative w-full overflow-hidden bg-gray-50"
+    >
+      <div
+        id="heroSliderTrack"
+        class="flex transition-transform duration-700 ease-in-out"
+        style="transform: translateX(0%)"
+      >
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image01.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image02.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image03.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image04.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image05.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image06.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image07.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image08.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image09.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+        <div class="min-w-full flex justify-center items-center bg-white px-4">
+          <img
+            src="images/storeCustomer/image10.jpeg"
+            class="w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] object-contain rounded-xl"
+          />
+        </div>
+      </div>
+
+      <button
+        onclick="moveHero(-1)"
+        class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur p-3 md:p-4 rounded-full shadow-lg hover:scale-110 hover:bg-white transition z-20"
+      >
+        <svg
+          width="22"
+          height="22"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewBox="0 0 24 24"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+
+      <button
+        onclick="moveHero(1)"
+        class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur p-3 md:p-4 rounded-full shadow-lg hover:scale-110 hover:bg-white transition z-20"
+      >
+        <svg
+          width="22"
+          height="22"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewBox="0 0 24 24"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+
+      <div
+        id="heroDots"
+        class="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 md:gap-3 z-20"
+      ></div>
+    </section>
+    <center>
+      <h1><strong>Sharma Mobiles</strong></h1>
+    </center>
+    <center>
+      <p class="text-sm leading-relaxed">
+        Authorized <strong>Samsung retailer in Hasimara</strong> offering
+        premium smartphones and reliable repairs services.
+        <strong>Best Mobile Phone Store in Hasimara</strong>
+      </p>
+    </center>
+
+    <header class="py-16 px-8 text-center bg-white relative">
       <span
         class="bg-blue-50 text-blue-600 text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
-        >Samsung Authorized Partners</span
       >
+        Samsung Authorized Partner
+      </span>
+
       <h1 class="text-5xl md:text-7xl font-light tracking-tight mt-6 mb-10">
         All-in-One <br /><span class="font-bold gemini-text">Mobile Hub.</span>
       </h1>
@@ -232,7 +329,7 @@
           <a
             href="techno-infinix.html"
             class="block px-6 py-2 hover:bg-gray-50 transition"
-            >infinix Series</a
+            >Infinix Series</a
           >
           <a
             href="vivo-oppo.html"
@@ -252,27 +349,31 @@
         </div>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-10 opacity-100">
-        <img src="images/cholamandalam.png" alt="HDB" class="h-6" />
+      <div class="flex flex-wrap justify-center gap-10 opacity-60">
+        <img src="images/cholamandalam.png" alt="Chola" class="h-6" />
         <img
           src="images/HDB_Financial_Services_logo.svg"
           alt="HDB"
           class="h-6"
         />
-        <img src="images/samsungfinance.webp" alt="Bajaj" class="h-6" />
-        <img src="images/dmi.jpeg" alt="Bajaj" class="h-6" />
+        <img
+          src="images/samsungfinance.webp"
+          alt="Samsung Finance"
+          class="h-6"
+        />
+        <img src="images/dmi.jpeg" alt="DMI" class="h-6" />
         <img src="images/Bajaj_Finserv_Logo.svg.png" alt="Bajaj" class="h-6" />
       </div>
     </header>
 
     <section id="phones" class="max-w-7xl mx-auto py-20 px-8">
-      <h2 class="text-2xl font-semibold mb-12 gemini-border pl-4">
+      <h2 class="text-2xl font-semibold mb-12 border-l-4 border-blue-600 pl-4">
         Latest Collections
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div
           onclick="location.href = 'samsung.html'"
-          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border-2 border-blue-100 shadow-sm"
+          class="group cursor-pointer card-hover p-2 rounded-3xl bg-white border-2 border-blue-100 shadow-sm"
         >
           <div
             class="aspect-square bg-blue-50 rounded-3xl mb-4 overflow-hidden relative"
@@ -297,7 +398,7 @@
 
         <div
           onclick="location.href = 'iphone.html'"
-          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
+          class="group cursor-pointer card-hover p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
         >
           <div
             class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
@@ -316,26 +417,26 @@
 
         <div
           onclick="location.href = 'techno-infinix.html'"
-          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
+          class="group cursor-pointer card-hover p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
         >
           <div
             class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
           >
             <img
               src="images/infinix_n_50_pro+.jpg"
-              alt="infinix"
+              alt="Infinix"
               class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
             />
           </div>
-          <h3 class="font-semibold text-lg text-center py-2">infinix Series</h3>
+          <h3 class="font-semibold text-lg text-center py-2">Infinix Series</h3>
           <p class="text-center text-xs text-gray-500 pb-4">
-            Powerful Performance Meets Bold Design
+            Powerful Performance
           </p>
         </div>
 
         <div
           onclick="location.href = 'vivo-oppo.html'"
-          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
+          class="group cursor-pointer card-hover p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
         >
           <div
             class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
@@ -351,21 +452,20 @@
             Masterpiece Photography
           </p>
         </div>
-
         <div
           onclick="location.href = 'moto-oneplus.html'"
-          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
+          class="group cursor-pointer card-hover p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
         >
           <div
             class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
           >
             <img
-              src="images/oneplus15.jpg"
-              alt="OnePlus"
+              src="images/OppoReno15.webp"
+              alt="Moto & OnePlus"
               class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
             />
           </div>
-          <h3 class="font-semibold text-lg text-center py-2">Moto & OnePlus</h3>
+          <h3 class="font-semibold text-lg text-center py-2">Moto & Oneplus</h3>
           <p class="text-center text-xs text-gray-500 pb-4">
             Clean OS & Performance
           </p>
@@ -378,15 +478,14 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div>
             <div class="text-xl font-bold mb-6 brand-gradient">
-              <strong>Sharma Mobiles</strong>
+              Sharma Mobiles
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
               Authorized <strong>Samsung retailer in Hasimara</strong> offering
-              premium smartphones and reliable repair services.
-              <strong>Best Mobile Phones Store in Hasimara</strong>
+              premium smartphones and reliable repairs services.
+              <strong>Best Mobile Phone Store in Hasimara</strong>
             </p>
           </div>
-
           <div>
             <h4 class="font-semibold text-sm mb-5 uppercase tracking-wider">
               Brands
@@ -409,24 +508,23 @@
                 >
               </li>
               <li>
-                <a href="realme-redmi.html" class="hover:text-white"
-                  >Realme / Redmi</a
+                <a href="techno-infinix.html".html" class="hover:text-white"
+                  >Infinix</a
                 >
               </li>
             </ul>
           </div>
-
           <div>
             <h4 class="font-semibold text-sm mb-5 uppercase tracking-wider">
               Contact
             </h4>
             <div class="space-y-3 text-sm text-gray-400">
               <p>Old Hasimara, opposite Bus Stand<br />Alipurduar - 735215</p>
-              <p>+91 9933558654</p>
-              <p>+91 8348554018</p>
+              <p>+91 9933558654
+                <br>+91 8348554018
+              </p>
             </div>
           </div>
-
           <div>
             <h4 class="font-semibold text-sm mb-5 uppercase tracking-wider">
               Store Hours
@@ -441,18 +539,76 @@
             </ul>
           </div>
         </div>
-
         <div
           class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500"
         >
-          © 2026 Sharma Mobiles. All rights reserved.
-
-          <br />Maintained by The Visionary Labz <br />7602858368 / 7365055639
+          © 2026 Sharma Mobiles. All rights reserved. <br />Maintained by The
+          Visionary Labz
+          <br>7602858368 / 7365055639
         </div>
       </div>
     </footer>
 
     <script>
+      // Slider Global Variables
+      let currentSlide = 0;
+      const track = document.getElementById("heroSliderTrack");
+      const totalSlides = track.children.length;
+      const dotsContainer = document.getElementById("heroDots");
+
+      // Initialize Dots
+      function initDots() {
+        dotsContainer.innerHTML = "";
+        for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement("button");
+          dot.className =
+            "h-1.5 transition-all duration-300 rounded-full cursor-pointer bg-gray-300";
+          dot.style.width = i === 0 ? "2rem" : "0.5rem"; // w-8 for active, w-2 for inactive
+          if (i === 0) dot.classList.add("bg-blue-600");
+
+          dot.onclick = () => goToSlide(i);
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        const dots = dotsContainer.children;
+        for (let i = 0; i < dots.length; i++) {
+          if (i === currentSlide) {
+            dots[i].style.width = "2rem"; // equivalent to w-8
+            dots[i].classList.add("bg-blue-600");
+            dots[i].classList.remove("bg-gray-300");
+          } else {
+            dots[i].style.width = "0.5rem"; // equivalent to w-2
+            dots[i].classList.remove("bg-blue-600");
+            dots[i].classList.add("bg-gray-300");
+          }
+        }
+      }
+
+      function moveHero(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+      }
+
+      // Auto-play logic
+      let autoPlay = setInterval(() => moveHero(1), 5000);
+      const sliderWrapper = document.getElementById("sliderWrapper");
+
+      sliderWrapper.addEventListener("mouseenter", () =>
+        clearInterval(autoPlay),
+      );
+      sliderWrapper.addEventListener("mouseleave", () => {
+        autoPlay = setInterval(() => moveHero(1), 5000);
+      });
+
+      // Menu Toggle Logic
       const menus = {
         productBtn: "productMenu",
         heroProductBtn: "heroProductMenu",
@@ -462,11 +618,9 @@
       Object.entries(menus).forEach(([btnId, menuId]) => {
         const btn = document.getElementById(btnId);
         const menu = document.getElementById(menuId);
-
         if (btn && menu) {
           btn.addEventListener("click", (e) => {
             e.stopPropagation();
-            // Close others first
             Object.values(menus).forEach((id) => {
               if (id !== menuId)
                 document.getElementById(id).classList.add("hidden");
@@ -476,13 +630,15 @@
         }
       });
 
-      // Global close
       window.addEventListener("click", () => {
         Object.values(menus).forEach((id) => {
           const el = document.getElementById(id);
           if (el) el.classList.add("hidden");
         });
       });
+
+      // Initial Call
+      initDots();
     </script>
   </body>
 </html>
